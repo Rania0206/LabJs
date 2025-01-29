@@ -43,3 +43,22 @@ console.log("User Category:", userCategory);
 let isAuthenticated=true;
 let authenticationStatus= isAuthenticated? "Authenticated":"Not authenticated";
 console.log("Authentication Status:", authenticationStatus);
+
+let role = "Employee"; // Change this to test different roles
+
+switch (role) {
+    case "Employee":
+        console.log("You are authorized to have full access to 'Dietary Services'.");
+        break;
+    case "Enrolled Member":
+        console.log("You are authorized to have full access to 'Dietary Services' and one-on-one interaction with a dietician.");
+        break;
+    case "Subscriber":
+        console.log("You are authorized to have partial access to 'Dietary Services'.");
+        break;
+    case "Non-Subscriber":
+        console.log("You need to enroll or at least subscribe first to avail this facility.");
+        break;
+    default:
+        console.log("Invalid role. Please enter a valid role: Employee, Enrolled Member, Subscriber, or Non-Subscriber.");
+}
